@@ -138,6 +138,10 @@ packages/
 *.lock.json
 *.nuget.props
 
+# Keep third-party libraries
+!lib/android
+!lib/ios
+
 ## TODO: If the tool you use requires repositories.config uncomment the next line
 #!packages/repositories.config
 

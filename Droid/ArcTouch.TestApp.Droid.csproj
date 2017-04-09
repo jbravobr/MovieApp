@@ -183,29 +183,29 @@
       <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.9\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.35\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.dll</HintPath>
+      <HintPath>..\lib\android\UXDivers.Artina.Shared.Base.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base.Droid">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.35\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.Droid.dll</HintPath>
+      <HintPath>..\lib\android\UXDivers.Artina.Shared.Base.Droid.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.35\lib\MonoAndroid10\UXDivers.Artina.Shared.dll</HintPath>
+      <HintPath>..\lib\android\UXDivers.Artina.Shared.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Droid">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.35\lib\MonoAndroid10\UXDivers.Artina.Shared.Droid.dll</HintPath>
+      <HintPath>..\lib\android\UXDivers.Artina.Shared.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\pcl\Syncfusion.SfRating.XForms.dll</HintPath>
+      <HintPath>..\lib\android\Syncfusion.SfRating.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms.Android">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\android\Syncfusion.SfRating.XForms.Android.dll</HintPath>
+      <HintPath>..\lib\android\Syncfusion.SfRating.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.Android">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\android\Syncfusion.SfRating.Android.dll</HintPath>
+      <HintPath>..\lib\android\Syncfusion.SfRating.Android.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Connectivity.Abstractions">
       <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>

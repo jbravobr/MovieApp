@@ -211,25 +211,25 @@
       <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.7.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.35\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.Base.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base.iOS">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.35\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.Base.iOS.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.35\lib\Xamarin.iOS10\UXDivers.Artina.Shared.dll</HintPath>
+      <HintPath>..\lib\iosUXDivers.Artina.Shared.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.iOS">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.35\lib\Xamarin.iOS10\UXDivers.Artina.Shared.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\pcl\Syncfusion.SfRating.XForms.dll</HintPath>
+      <HintPath>..\lib\ios\Syncfusion.SfRating.XForms.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.iOS">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\ios-unified\Syncfusion.SfRating.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\Syncfusion.SfRating.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms.iOS">
-      <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\ios-unified\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Connectivity.Abstractions">
       <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
