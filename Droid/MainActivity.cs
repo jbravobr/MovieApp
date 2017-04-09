@@ -9,7 +9,8 @@ namespace ArcTouch.TestApp.Droid
     [Activity(Label = "DemoApp",
               Icon = "@drawable/ic_launcher",
               Theme = "@style/MyTheme",
-              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+              ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

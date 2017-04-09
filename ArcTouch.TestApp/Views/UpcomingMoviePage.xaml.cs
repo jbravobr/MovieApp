@@ -14,5 +14,10 @@ namespace ArcTouch.TestApp.Views
                 ((ListView)sender).SelectedItem = null;
             };
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

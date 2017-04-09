@@ -14,7 +14,7 @@ namespace ArcTouch.TestApp.iOS
         {
             new SfRatingRenderer();
 
-            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(255,131,0);
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(255, 131, 0);
             UINavigationBar.Appearance.TintColor = UIColor.White;
 
             global::Xamarin.Forms.Forms.Init();
@@ -33,6 +33,11 @@ namespace ArcTouch.TestApp.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, UIWindow forWindow)
+        {
+            return UIInterfaceOrientationMask.Portrait;
         }
     }
 }
