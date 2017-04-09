@@ -18,10 +18,11 @@ namespace ArcTouch.TestApp
         public static SQLiteConnection AppSQLiteConnection { get; set; }
         public static HttpClient AppHttpClient { get; set; }
         public static bool DisableDatabaseOperations { get; set; } = false;
+        public static bool IsEmulatingAndroid { get; set; } = true;
 
         protected override void OnInitialized()
         {
-            MobileCenter.Start("ios={515f105a-55ed-44ba-98f5-7db8771d2d40};android={56032f21-e332-42c6-b3a6-ed0b21b2f0ec}", typeof(Analytics), typeof(Crashes));
+            MobileCenter.Start(typeof(Analytics), typeof(Crashes));
             MobileCenter.LogLevel = LogLevel.Verbose;
             Analytics.Enabled = true;
 
@@ -46,6 +47,7 @@ namespace ArcTouch.TestApp
             Container.RegisterType(typeof(IMobileCenterCrashes), typeof(MobileCenterCrashes));
             Container.RegisterType(typeof(IMobileAnalyticsFunctions), typeof(MobileAnalyticsFunctions));
             Container.RegisterType(typeof(IMovieApplicationServices), typeof(MovieApplicationServices));
+            Container.RegisterType(typeof(IConnectivityFunctions), typeof(ConnectivityFunctions));
 
             // Register Pages for Navigation System (PRISM)
             Container.RegisterTypeForNavigation<UpcomingMoviePage>();

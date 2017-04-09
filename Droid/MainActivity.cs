@@ -6,11 +6,9 @@ using UXDivers.Artina.Shared;
 
 namespace ArcTouch.TestApp.Droid
 {
-    [Activity(Label = "DemoApp", 
-              Icon = "@drawable/ic_launcher", 
-              Theme = "@style/MyTheme", 
-              MainLauncher = true, 
-              LaunchMode = LaunchMode.SingleTask,
+    [Activity(Label = "DemoApp",
+              Icon = "@drawable/ic_launcher",
+              Theme = "@style/MyTheme",
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -22,6 +20,7 @@ namespace ArcTouch.TestApp.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            Microsoft.Azure.Mobile.MobileCenter.Configure("56032f21-e332-42c6-b3a6-ed0b21b2f0ec");
 
             Acr.UserDialogs.UserDialogs.Init(() => (Activity)Forms.Context); // Initializing Acr.UserDialogs
             FFImageLoading.Forms.Droid.CachedImageRenderer.Init(); // Initializing FFImageLoading

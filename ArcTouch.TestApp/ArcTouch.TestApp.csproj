@@ -51,9 +51,6 @@
     </Compile>
     <Compile Include="Styles\Styles.cs" />
     <Compile Include="Utils\GrialShapesFont.cs" />
-    <Compile Include="Views\Common\Rating.xaml.cs">
-      <DependentUpon>Rating.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\BaseNavigationPage.xaml.cs">
       <DependentUpon>BaseNavigationPage.xaml</DependentUpon>
     </Compile>
@@ -95,6 +92,9 @@
     <Compile Include="Utils\AnalitycsFunctions\IMobileAnalyticsFunctions.cs" />
     <Compile Include="ApplicationServices\IMovieApplicationServices.cs" />
     <Compile Include="ApplicationServices\MovieApplicationServices.cs" />
+    <Compile Include="Utils\ConnectivityFunctions\IConnectivityFunctions.cs" />
+    <Compile Include="Utils\ConnectivityFunctions\ConnectivityFunctions.cs" />
+    <Compile Include="Utils\Exceptions\ConnectionException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
@@ -124,15 +124,13 @@
     <Folder Include="Settings\" />
     <Folder Include="Utils\CrashesFunctions\" />
     <Folder Include="Utils\AnalitycsFunctions\" />
+    <Folder Include="Utils\ConnectivityFunctions\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\UpcomingMoviePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Templates\UpcomingMovieItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Common\Rating.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BaseNavigationPage.xaml">
@@ -184,12 +182,6 @@
     </Reference>
     <Reference Include="Acr.Settings.Interface">
       <HintPath>..\packages\Acr.Settings.6.0.0\lib\portable-net45+win8+wpa81+wp8\Acr.Settings.Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Connectivity.Abstractions">
-      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Connectivity">
-      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Effects">
       <HintPath>..\packages\UXDivers.Effects.0.6.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Effects.dll</HintPath>
@@ -262,6 +254,12 @@
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms">
       <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\pcl\Syncfusion.SfRating.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

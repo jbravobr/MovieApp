@@ -12,9 +12,13 @@ namespace ArcTouch.TestApp.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            new SfRatingRenderer ();
+            new SfRatingRenderer();
+
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(255,131,0);
+            UINavigationBar.Appearance.TintColor = UIColor.White;
 
             global::Xamarin.Forms.Forms.Init();
+            Microsoft.Azure.Mobile.MobileCenter.Configure("515f105a-55ed-44ba-98f5-7db8771d2d40");
             CachedImageRenderer.Init(); // Initializing FFImageLoading
             AnimationViewRenderer.Init(); // Initializing Lottie
 

@@ -231,6 +231,12 @@
     <Reference Include="Syncfusion.SfRating.XForms.iOS">
       <HintPath>..\..\..\Documents\Syncfusion\14.4.0.15\Xamarin\lib\ios-unified\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ArcTouch.TestApp\ArcTouch.TestApp.csproj">

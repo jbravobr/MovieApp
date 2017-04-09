@@ -17,9 +17,11 @@
 	</ContentPage.Resources>
 	<ContentPage.Content>
 		<StackLayout>
-			<SearchBar Placeholder="Search for a movie..."
+			<SearchBar x:Name="searchbar"
+			           Placeholder="Search for a movie..."
 			           SearchCommand="{Binding SearchMovieCommand}"
-			           SearchCommandParameter="{Binding .}">
+			           SearchCommandParameter="{Binding Source={x:Reference searchbar},
+			                                            Path=Text}">
 				<SearchBar.Behaviors>
 					<converters:EventToCommandBehavior Command="{Binding SearchMovieCommand}"
 					                                   Converter="{StaticResource TextChangedConverter}"

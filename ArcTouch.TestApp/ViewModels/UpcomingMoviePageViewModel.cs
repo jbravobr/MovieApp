@@ -73,6 +73,11 @@ namespace ArcTouch.TestApp.ViewModels
 
                 Movies = new ObservableCollection<Results>(sorted);
             }
+            catch (ConnectionException)
+            {
+                uiFunctionsService.HideLoading();
+                uiFunctionsService.ShowToast(Constants.OfflineMessage, ToastType.Info, 8000);
+            }
             catch (FetchRemoteDataException)
             {
                 uiFunctionsService.ShowToast(Constants.GetOnlineDataErrorMessage, ToastType.Error, 8000);
@@ -160,6 +165,12 @@ namespace ArcTouch.TestApp.ViewModels
                 uiFunctionsService.HideLoading();
                 uiFunctionsService.ShowToast(Constants.GetOnlineDataErrorMessage, ToastType.Error, 8000);
             }
+            catch (ConnectionException)
+            {
+                uiFunctionsService.HideLoading();
+                uiFunctionsService.ShowToast(Constants.OfflineMessage, ToastType.Info, 8000);
+                GetLocalMovieList();
+            }
             catch
             {
                 uiFunctionsService.HideLoading();
@@ -181,6 +192,11 @@ namespace ArcTouch.TestApp.ViewModels
             {
                 var ret = await resultsService.GetAllRemoteData(APIOperations.GetMovieListURLAddress, ConfigureParameters(APIOperations.GetMovieListURLAddress, pageIndex));
                 ret = AddImageLinkAndRemoveRepeated(ret);
+            }
+            catch (ConnectionException)
+            {
+                uiFunctionsService.HideLoading();
+                uiFunctionsService.ShowToast(Constants.OfflineMessage, ToastType.Info, 8000);
             }
             catch (FetchRemoteDataException)
             {

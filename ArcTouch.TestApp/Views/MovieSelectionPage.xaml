@@ -70,17 +70,13 @@
 					<!--  RATING  -->
 					<rating:SfRating x:Name="rating"
 					                 Grid.Row="3"
-					                 VerticalOptions="Center"
 					                 ItemCount="10"
-					                 ItemSize="8"
+					                 ItemSize="15"
 					                 ItemSpacing="4"
 					                 Precision="Half"
 					                 ReadOnly="true"
 					                 TooltipPlacement="TopLeft"
 					                 Value="{Binding Movie.VoteAverage}">
-						<rating:SfRating.RatingSettings>
-							<rating:SfRatingSettings RatedStroke="Red" />
-						</rating:SfRating.RatingSettings>
 					</rating:SfRating>
 
 					<!--  DESCRIPTION  -->

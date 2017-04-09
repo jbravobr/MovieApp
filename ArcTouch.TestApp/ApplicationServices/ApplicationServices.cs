@@ -13,18 +13,18 @@ namespace ArcTouch.TestApp
     public class ApplicationServices<T> : IApplicationServices<T> where T : class, new()
     {
         readonly IBaseRepository<T> _baseRepository;
-        readonly IUIFunctions uiFunctionsService;
         readonly IMobileCenterCrashes mobileCeterCrashesService;
         readonly IMovieApplicationServices movieServices;
+        readonly IConnectivityFunctions connectivityFunctionsService;
 
         public ApplicationServices(IBaseRepository<T> baseRepository,
-                                   IUIFunctions uiFunc,
                                    IMobileCenterCrashes mbcService,
-                                   IMovieApplicationServices mService)
+                                   IMovieApplicationServices mService,
+                                   IConnectivityFunctions connFuncService)
         {
-            uiFunctionsService = uiFunc;
             mobileCeterCrashesService = mbcService;
             movieServices = mService;
+            connectivityFunctionsService = connFuncService;
             _baseRepository = baseRepository;
 
             App.AppHttpClient = BaseHttpClient.Instance;
@@ -70,6 +70,9 @@ namespace ArcTouch.TestApp
         {
             try
             {
+                if (!await connectivityFunctionsService.IsConnectedAsync())
+                    throw new ConnectionException();
+
                 var data = await App.AppHttpClient.GetAsync($"{operation.GetDescription()}{parameters}");
 
                 if (data != null && data.IsSuccessStatusCode)
@@ -95,7 +98,6 @@ namespace ArcTouch.TestApp
             catch
             {
                 mobileCeterCrashesService.AskBeforeSendCrashReport();
-                uiFunctionsService.ShowToast(Constants.GetOnlineDataErrorMessage, ToastType.Error, 8000);
                 throw new FetchRemoteDataException();
             }
         }
@@ -119,6 +121,9 @@ namespace ArcTouch.TestApp
         {
             try
             {
+                if (!await connectivityFunctionsService.IsConnectedAsync())
+                    throw new ConnectionException();
+                
                 var data = await App.AppHttpClient.GetAsync($"{operation.GetDescription()}{parameters}");
 
                 if (data != null && data.IsSuccessStatusCode)
@@ -146,7 +151,6 @@ namespace ArcTouch.TestApp
             catch
             {
                 mobileCeterCrashesService.AskBeforeSendCrashReport();
-                uiFunctionsService.ShowToast(Constants.GetOnlineDataErrorMessage, ToastType.Error, 8000);
                 throw new FetchRemoteDataException();
             }
         }

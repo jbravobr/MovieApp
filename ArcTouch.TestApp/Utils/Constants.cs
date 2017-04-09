@@ -4,6 +4,7 @@
     {
         public const string BaseURLAddress = "https://api.themoviedb.org/3/";
         public const int ResultPerPage = 20;
+        public const string RemoteHostForTestConnection = "https://www.google.com";
 
         //Messages
         public const string MessageLoadingMoviesForTheFirstTime = "Loading movies ...";
@@ -19,5 +20,6 @@
         public const string GetOnlineDataErrorMessage = "Oops ... Error trying to fetch information from server. Please try again later";
         public const string LoadingMovieDetailsErrorMessage = "Oops ... Error trying to load information from selected movie";
         public const string LastSessionCrashMessage = "I noticed that there was an error the last time you were here, I apologize and we are reviewing this issue";
+        public const string OfflineMessage = "Sorry, in order to perform this action you shold have a active internet connection";
     }
 }
